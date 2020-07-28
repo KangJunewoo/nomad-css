@@ -43,7 +43,23 @@
         - 즉 width를 쓸 필요가 있나..? 이제 없는거다. px는 절대적인데 디스플레이는 크기가 제각각이니까.
       - flex basis는 main axis의 크기다. 기본값은 가로크기다 이말이지.
 
+- flexbox 연습
+  - ![](flexboxfroggy.gif)
+  - [여기](http://flexboxfroggy.com/)서 가능
+  - 정렬하기
+    - justify-conetnt / align-items : space-around, space-between, center, flex-start, flex-end
+    - space-around vs space-between?
+  - 축바꾸기
+    -  flex-direction : row vs column (feat.-reverse)
+  - 순서바꾸기
+    - order
+  - 한줄에서 벗어나기
+    - flex-wrap: wrap;
+    - flex-flow는 flex-direction + flex-wrap을 동시에 적용한 효과. 가령 column wrap;으로 선언 가능.
+    - align-content로 여러 줄 사이 조정 가능. align-items와 같은 속성들이 들어감.
 
+  
+  
 
 ## 기타 몰랐던 것들
 ```
