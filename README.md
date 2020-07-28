@@ -11,7 +11,7 @@
     - 이걸로 px로 margin 주면, 반응형에서 깨진다. 그래서 flexbox가 나옴.
   - flex : 이걸 적용하면 flexbox 사용 가능.
 
-- flexbox
+- flexbox 개념
   - display:flex;를 부모에 적용해주면 됨.
   - 붙어있는 부모가 자식을 움직일 수 있다.
   - 반응형 inline-block이라고 생각하면 됨.
@@ -36,6 +36,12 @@
       - wrap-reverse 또한 존재.
       - 그럼 이걸로 두줄되었을때 각 줄사이의 여백은? align-content로 조절가능.
         - align-content: space-between; 등등 다양한 옵션.
+      - nowrap일때는 어떤 박스가 찌그러질지 설정할 수 있음
+        - child에 대해 flex-shrink:2로 해주면 다른것보다 두배로 더 찌그러짐. 기본값이 1인거지.
+        - 상당히 유용한 property라고 할수있지.
+        - 반대로 flex-grow도 있음. 여분의 공간이 있다면 그걸 활용해 늘어나는거지. 기본값은 0.
+        - 즉 width를 쓸 필요가 있나..? 이제 없는거다. px는 절대적인데 디스플레이는 크기가 제각각이니까.
+      - flex basis는 main axis의 크기다. 기본값은 가로크기다 이말이지.
 
 
 
