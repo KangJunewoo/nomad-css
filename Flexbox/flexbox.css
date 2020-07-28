@@ -1,12 +1,24 @@
-.wrapper{
+.father{
   display:flex;
+  /* flex-direction 기본값은 row.
+  column으로 줘서 두 axis 바꿀 수 있음. */
   justify-content:space-around;
   align-items:flex-start;
   height:100vh;
 }
 
-.box{
+.child{
   width:200px;
   height:200px;
   background:peru;
+  color:white;
+  font-size:50px;
+}
+
+.child:nth-child(2){
+  align-self:center;
+}
+
+.child:nth-child(3){
+  align-self:flex-end;
 }
