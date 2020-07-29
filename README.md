@@ -44,7 +44,7 @@
       - flex basis는 main axis의 크기다. 기본값은 가로크기다 이말이지.
 
 - flexbox 연습
-  - ![](flexboxfroggy.gif)
+  - ![](https://github.com/KangJunewoo/nomad-css/blob/master/Flexbox/flexboxfroggy.gif)
   - [여기](http://flexboxfroggy.com/)서 가능
   - 정렬하기
     - justify-conetnt / align-items : space-around, space-between, center, flex-start, flex-end
@@ -59,7 +59,36 @@
     - align-content로 여러 줄 사이 조정 가능. align-items와 같은 속성들이 들어감.
 
   
-  
+## Grid
+- 왜 그리드가 필요할까?
+  - flexbox에선 뭐랄까 모두 개별적으로 해줘야 한다.
+  - 그리드모양을 생각보다 flexbox로 만들기 쉽지 않다.
+- 그리드 기본
+  - display:grid;로 적용가능.
+  - 역시나 father에서 거의 대부분을 적용해줌.
+  - column 당연히 정해줘야겠지.
+    - grid-template-columns: 20px 40px 30px 60px 이런식으로 각 칼럼 사이즈를 줄 수 있음
+      - 200px 네번준다고 하면 repeat(4, 200px); 해줘도 ㄱㄴ.
+      - repeat 짬뽕 ㄱㄴ (공백으로 구분)
+      - auto는 가능한 크게. 역시 짬뽕 ㄱㄴ.
+    - column-gap 적용가능.(그냥 gap도 되네)
+  - 그담엔 row를 만지고 싶다라고 해보면
+    - grid-template-rows : 100px 50px 300px 요런식.
+      - repeat 당연히 ㄱㄴ
+    - row-gap 또한 적용 ㄱㄴㄱㄴ
+- grid template areas
+  - 각각의 자식에 grid-area로 이름을 부여하고(따옴표 ㄴㄴ)
+  - 부모에 grid-template-areas:"a a a a" "b b b c" "b b b c" "d d d d"; 해주면 템플릿처럼 작동함
+  - empty space를 남기고 싶다면 a b c d 들어갈 자리에 . 찍자.
+- 쭉쭉 늘리기 (자식 속성)
+  - grid-column-start :1;& grid-column-end:4;
+    - 1째칸에서 시작해 4째칸에서 끝난다.
+    - 줄이면 grid-column: 1 / 4;
+    - 처음부터 끝까지 가는 상황이면 1 / -1;
+    - 몇칸 차지하는지 나타내고 싶다면 : span 활용
+      - 시작점도 같이 적어줘야함.
+      - 2 / span 2;면 2번째에서 시작해 2칸 차지한다는 뜻.
+  - row도 됨.
 
 ## 기타 몰랐던 것들
 ```
