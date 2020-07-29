@@ -113,8 +113,18 @@
 - align-self는 자식한테 적용되는거 익숙하지?
   - justify-self도 그렇게 할 수 있음.
   - 합치면 place-self: start end; 이런 식으로
-- vscode 팁
-  - .item*20>{$}로 1~20까지 item 만들 수 있음.
+- keywords
+  - minmax(100px, 1fr) : 100px이상 1fr 이하가 됨.
+  - auto-fill / auto-fit
+    - auto-fill : row에다 빈 column들로 개수를 채우는거
+    - auto-fit : row에 그나마 있는 것들로 크기를 채우는거
+    - 반응형 디자인의 기본이라고 할 수 있다.
+  - min-content / max-content : 태그 안의 컨텐트(텍스트같은거)에 촤라락 맞춰버리기
+    - min-content : 여러줄에 최대한 걸치고 박스는 줄어듦
+    - max-content : 한줄 쫙 눌이고 박스도 늘어남
+    - size에 연연하지 않고 content에 맞춘다는 점이 혁신적.. 이라고 말한다!
+  - 약간 이부분 강의 나중에 필요할때 다시 들어보자. 아직 어떻게 응용할지 감이 잘 안온다.
+
 
 ## 기타 몰랐던 것들
 ```
@@ -122,3 +132,4 @@
   ...
 }
 ```
+vscode에서 .item*20>{$}로 1~20까지 item 만들 수 있음.
