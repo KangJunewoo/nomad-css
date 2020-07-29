@@ -63,12 +63,16 @@
 - 왜 그리드가 필요할까?
   - flexbox에선 뭐랄까 모두 개별적으로 해줘야 한다.
   - 그리드모양을 생각보다 flexbox로 만들기 쉽지 않다.
+  - flexbox는 1차원기반 grid는 2차원기반
 - 그리드 기본
   - display:grid;로 적용가능.
+  - 기본방향은 grid-auto-flow:row; 방향바꾸려면 column으로 고우고우.
   - 역시나 father에서 거의 대부분을 적용해줌.
   - column 당연히 정해줘야겠지.
     - grid-template-columns: 20px 40px 30px 60px 이런식으로 각 칼럼 사이즈를 줄 수 있음
+      - 이름을 줄 수 있음. \[first-line\] 100px \[second-line\] 200px 이런식으로.
       - 200px 네번준다고 하면 repeat(4, 200px); 해줘도 ㄱㄴ.
+      - px 대신 상대적으로 줄거면 fr 가능. 꽉 채우는 상태에서 해당 비율만큼 채움.
       - repeat 짬뽕 ㄱㄴ (공백으로 구분)
       - auto는 가능한 크게. 역시 짬뽕 ㄱㄴ.
     - column-gap 적용가능.(그냥 gap도 되네)
@@ -76,10 +80,21 @@
     - grid-template-rows : 100px 50px 300px 요런식.
       - repeat 당연히 ㄱㄴ
     - row-gap 또한 적용 ㄱㄴㄱㄴ
+    - row에 fr 적용할거면 height 먼저 설정해주자. 50vh 이런식으로.
+    - 적용한거보다 더 많이 들어온다면? grid-auto-rows 적용 가능.
+      - grid-auto-rows:100px;로 하면 더 많은 content가 들어와도 모두 100px로 처리됨.
 - grid template areas
   - 각각의 자식에 grid-area로 이름을 부여하고(따옴표 ㄴㄴ)
-  - 부모에 grid-template-areas:"a a a a" "b b b c" "b b b c" "d d d d"; 해주면 템플릿처럼 작동함
+  ```
+    grid-template-areas:
+      "a a a a" (fr이나 이름 지정가능)
+      "b b b c" 
+      "b b b c" 
+      "d d d d"; 
+  ```
   - empty space를 남기고 싶다면 a b c d 들어갈 자리에 . 찍자.
+  - repeat는 적용되지 않음.
+  - 니꼬는 이 방법을 제일 좋아함. 네이밍도 잘 안쓴다고 하더라.
 - 쭉쭉 늘리기 (자식 속성)
   - grid-column-start :1;& grid-column-end:4;
     - 1째칸에서 시작해 4째칸에서 끝난다.
@@ -89,10 +104,21 @@
       - 시작점도 같이 적어줘야함.
       - 2 / span 2;면 2번째에서 시작해 2칸 차지한다는 뜻.
   - row도 됨.
+  - 각 이름을 갖다쓸 수 있음.
+- justify-items와 align-items 사용가능.
+  - start / end가 많이 쓰이네. -> 이 경우 width / height가 있어야만 가능.
+  - 기본값은 모두 stretch다.
+  - place-items: stretch center; 이런 식으로 한방에 두개 적용가능.
+  - #2.9 한번 더 보자.
+- align-self는 자식한테 적용되는거 익숙하지?
+  - justify-self도 그렇게 할 수 있음.
+  - 합치면 place-self: start end; 이런 식으로
+- vscode 팁
+  - .item*20>{$}로 1~20까지 item 만들 수 있음.
 
 ## 기타 몰랐던 것들
 ```
-.box:nth-child(3){
+.box:nth-child(숫자, odd/even 등..){
   ...
 }
 ```
