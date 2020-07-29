@@ -124,12 +124,31 @@
     - max-content : 한줄 쫙 눌이고 박스도 늘어남
     - size에 연연하지 않고 content에 맞춘다는 점이 혁신적.. 이라고 말한다!
   - 약간 이부분 강의 나중에 필요할때 다시 들어보자. 아직 어떻게 응용할지 감이 잘 안온다.
+- grid 연습
+  - ![](https://github.com/KangJunewoo/nomad-css/blob/master/Grid/gridgarden.gif)
+  - [여기](http://cssgridgarden.com/)에서 연습 가능
+  - 자식태그 : 시작위치 & 끝위치
+    - grid-column-start & grid-column-end -> grid-column
+    - 칸이 아닌 선을 기준으로 함!
+    - 음수 & span & auto
+    - row도 가능
+    - 싹 다 합치면 grid-area(rs cs re ce 순)
+    - order로 그리드 안에서 어떤게 먼저 오게 할지 설정 가능.
+  - 부모태그 : 그리드 자체의 설정
+    - grid-template-columns & grid-template-rows -> 합치면 grid-template
+    - repeat(8, 12.5%); 식으로 설정 ㄱㄴ.
+  - 24번 이후 아리까리하다.
+
+
+## SCSS
+
 
 
 ## 기타 몰랐던 것들
-```
-.box:nth-child(숫자, odd/even 등..){
-  ...
-}
-```
-vscode에서 .item*20>{$}로 1~20까지 item 만들 수 있음.
+- ```
+  .box:nth-child(숫자, odd/even 등..){
+    ...
+  }
+  ```
+- vscode에서 .item*20>{$}로 1~20까지 item 만들 수 있음.
+- em : 상위요소 기준 em만큼 곱한 크기
