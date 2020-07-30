@@ -141,7 +141,15 @@
 
 
 ## SCSS
-
+- 기본
+  - scss 파일명으로 _를 앞에 붙이면(예를들면 _merong.scss) scss 안에서만 쓰겠다는 뜻임. 아래 나오는 문법들 적용시킬때 씀.
+  - 변수는 $를 붙이고, 키워드는 @를 붙임.
+    - @import '_merong.scss' 해서 background:$bg로 설정하는 것처럼.
+    - .box{&:hover{haha}} 이런식으로 this처럼 & 사용 가능.
+  - nesting 물론 가능.
+- Mixins & Extend
+  - 적절히 활용해 함수처럼 사용가능.
+- Responsive Mixins : 반응형 디자인을 쉽게 줄 수 있음. 코드 참조.
 
 
 ## 기타 몰랐던 것들
