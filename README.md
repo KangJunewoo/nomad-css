@@ -53,10 +53,7 @@
 
   
 ## Grid
-- 왜 그리드가 필요할까?
-  - flexbox에선 뭐랄까 모두 개별적으로 해줘야 한다.
-  - 그리드모양을 생각보다 flexbox로 만들기 쉽지 않다.
-  - flexbox는 1차원기반 grid는 2차원기반
+- 2차원 작업을 위해선 그리드를 쓰자.
 - 그리드 기본
   - display:grid;로 적용가능.
   - 기본방향은 grid-auto-flow:row; 방향바꾸려면 column으로 고우고우.
